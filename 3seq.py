@@ -16,8 +16,8 @@ numbers_list_1 = [int(elem) for elem in numbers_sequence_1]
 numbers_sequence_2 = input("Введите вторую последовательность цифр через ',', ';' либо '/': ").replace(';', ',').replace('/', ',').split(',')
 numbers_list_2 = [int(elem) for elem in numbers_sequence_2]
 
-for i in range(len(numbers_list_1) - 1, 0, -1):
-    if numbers_list_1[i] in numbers_list_2:
-        del numbers_list_1[i]
+for num in numbers_list_1[::-1]:
+    if num in numbers_list_2:
+        numbers_list_1.remove(num)
 
 print(f'Результирущий список: {numbers_list_1}')

@@ -12,8 +12,12 @@
 #
 # (Дополнительно*) Предусмотреть что пользователь может использовать один из 3-х разделителей:
 # запятую, точку с запятой, слэш (1,2,3 1;2;3 1/2/3), но только какой то один 1,2;3/4 - так нельзя
+unique_numbers_list = []
 
 numbers_sequence = input("Введите последовательность цифр через ',', ';' либо '/': ").replace(';', ',').replace('/', ',').split(',')
 numbers_list = [int(elem) for elem in numbers_sequence]
-unique_numbers_list = list(set(numbers_list))
+for elem in numbers_list:
+    if numbers_list.count(elem) == 1:
+        unique_numbers_list.append(elem)
+# unique_numbers_list = list(set(numbers_list))
 print(unique_numbers_list)

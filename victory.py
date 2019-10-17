@@ -130,29 +130,6 @@ while next_round == 'y':
             print(
                 f'Вы ошиблись... {name} родился {day_names[int(true_datas[0])]} {month_names[int(true_datas[1])]} {int(true_datas[2])} года')
 
-        # if len(answer) == 10:
-        #     if '.' in answer:
-        #         if answer.count('.') == 2:
-        #             datas = answer.split('.')
-        #             if len(datas[0]) == len(datas[1]) == 2 and len(datas[2]) == 4:
-        #                 if datas[0].isdigit() and datas[0].isdigit() and datas[0].isdigit():
-        #                     if answer == famous_people_data[name]:
-        #                         hit += 1
-        #                     else:
-        #                         lose += 1
-        #                         true_datas = famous_people_data[name].split('.')
-        #                         print(f'Вы ошиблись... {name} родился {day_names[int(true_datas[0])]} {month_names[int(true_datas[1])]} {int(true_datas[2])} года')
-        #                 else:
-        #                     print('Введены НЕ числа')
-        #             else:
-        #                 print(f'Неверная длина чисел даты рождения!')
-        #         else:
-        #             print(f'В дате должно быть ровно две разделительные точки!')
-        #     else:
-        #         print(f'Дата должна быть разделена точками!!!')
-        # else:
-        #     print(f'Неверный формат даты рождения! {name} недоволен!!!')
-
     hit_percent = (100 * hit // (hit + lose))
     lose_percent = (100 * lose // (hit + lose))
     print(f'Верно угадано: {hit} ({hit_percent}%), ошибок: {lose} ({lose_percent}%)!\n')

@@ -25,6 +25,6 @@ for i in range(1, int(size) + 1):
         element = input(f'Введите {i}-й элемент ЦЕЛЫМ ЧИСЛОМ: ')
 
     numbers.append(int(element))
-    numbers.sort()
 
+numbers.sort()
 print(f'\nИтоговый список: {numbers}')

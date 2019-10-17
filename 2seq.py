@@ -16,8 +16,9 @@ unique_numbers_list = []
 
 numbers_sequence = input("Введите последовательность цифр через ',', ';' либо '/': ").replace(';', ',').replace('/', ',').split(',')
 numbers_list = [int(elem) for elem in numbers_sequence]
+
 for elem in numbers_list:
     if numbers_list.count(elem) == 1:
         unique_numbers_list.append(elem)
-# unique_numbers_list = list(set(numbers_list))
+
 print(unique_numbers_list)
